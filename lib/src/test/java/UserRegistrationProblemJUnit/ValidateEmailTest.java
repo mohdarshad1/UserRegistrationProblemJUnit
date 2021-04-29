@@ -26,6 +26,7 @@ public class ValidateEmailTest {
 		userRegistration = new UserRegistration();
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Parameterized.Parameters
 	public static Collection input() {
 		return Arrays.asList(new Object[][] {
@@ -55,7 +56,12 @@ public class ValidateEmailTest {
 	
 	@Test
 	public void testValidateEmailTest() {
-		assertEquals(expected,userRegistration.validateEmail(Email));
+		try {
+			assertEquals(expected,userRegistration.validateEmail(Email));
+		} catch (ValidateEmailException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
