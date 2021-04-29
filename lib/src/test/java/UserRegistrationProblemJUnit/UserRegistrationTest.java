@@ -1,6 +1,7 @@
 package UserRegistrationProblemJUnit;
 
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class UserRegistrationTest {
@@ -8,14 +9,14 @@ public class UserRegistrationTest {
 	@Test
 	public void givenFirstName_WhenProper_ShouldReturnTrue() {
 		UserRegistration validatorObj = new UserRegistration();
-		boolean result = validatorObj.validateFirstName("Mohd");
+		boolean result = validatorObj.validateFirstName("Sippora");
 		assertTrue(result);
 	}
 	
 	@Test
 	public void givenLastName_WhenProper_ShouldReturnTrue() {
 		UserRegistration validatorObj = new UserRegistration();
-		boolean result = validatorObj.validateLastName("Arshad");
+		boolean result = validatorObj.validateLastName("Toppo");
 		assertTrue(result);
 	}
 	
@@ -36,10 +37,4 @@ public class UserRegistrationTest {
 		assertTrue(validatorObj.validatePassword("@qwerty!@*"));
 	}
 	
-	@Test
-	public void givenMessage_whenNotSad_ShouldReturnHappy() {
-		UserRegistration moodAnalyser = new UserRegistration();
-		String mood = moodAnalyser.analyzeMood("This is a sad message");
-		assertEquals("Happy", mood);
-	}
 }
