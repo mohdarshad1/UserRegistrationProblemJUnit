@@ -8,14 +8,14 @@ public class UserRegistrationTest {
 	@Test
 	public void givenFirstName_WhenProper_ShouldReturnTrue() {
 		UserRegistration validatorObj = new UserRegistration();
-		boolean result = validatorObj.validateFirstName("Sippora");
+		boolean result = validatorObj.validateFirstName("Mohd");
 		assertTrue(result);
 	}
 	
 	@Test
 	public void givenLastName_WhenProper_ShouldReturnTrue() {
 		UserRegistration validatorObj = new UserRegistration();
-		boolean result = validatorObj.validateLastName("Toppo");
+		boolean result = validatorObj.validateLastName("Arshad");
 		assertTrue(result);
 	}
 	
